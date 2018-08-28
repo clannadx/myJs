@@ -12,7 +12,8 @@ function assert (expression, message) {
 function testCase (message, tests) {
   var total = 0
   var success = 0
-  console.log(message + ":");  
+  console.log(message + ":");
+  
   for (var test in tests) {
     total += 1
     var ret = tests[test](test)
