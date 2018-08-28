@@ -1,6 +1,7 @@
 // 污染.持久化
 function assert (expression, message) {
   console.log(expression, message)
+  return expression
 }
 
 // 用例 test - case
