@@ -1,0 +1,21 @@
+{
+  "name": "pencil",
+  "version": "0.1.0",
+  "description": "工具库 pencil",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "main": "js/pencil.js",
+  "keywords": [
+    "tool",
+    "util",
+    "js",
+    "library"
+  ],
+  "author": "jero",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint-plugin-html": "^3.2.1",
+    "standard": "^10.0.3"
+  }
+}

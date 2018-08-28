@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>自己的 JS 库</title>
+</head>
+<body>
+    <script src="js/pencil.js"></script>
+    <script>
+        function assert(expression,message) {
+            console.log(expression,message);
+            
+        }
+        assert(query('hello', '?hello=test') ==='test','test hello = test');
+        assert(query('hello','?hello=') ==='','test hello = empty');
+        assert(query('hello','?hello=test&hello2=3') ==='test','test hello = test with multiple param');
+      console.log(query('hello', '?hello=test'))
+    </script>
+</body>
+</html>
