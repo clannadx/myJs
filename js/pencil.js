@@ -1,12 +1,11 @@
 /* global query */
 
-/**
- * 反序列化 querystring
- * @param {String} url
- * @return {undefined|String}
- */
-function query (name, url) {
+const Pencil = {}
+
+Pencil.query = (name, url) => {
   var reg = new RegExp('(?:\\?|&)' + name + '=(.*?)(?:&|$)');
   var ret = reg.exec(url) || [];
   return ret[1]
 }
+
+module.exports  = Pencil
