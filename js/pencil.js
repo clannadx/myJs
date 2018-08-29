@@ -25,6 +25,11 @@ Pencil.serialize = (Obj) => {
 Pencil.change = (arr) => {
   return  arr.join('')
 }
+/**
+ * 根据传入的 index 将数组中的某项移除：
+ * @param {*} index
+ * @param {*} arr
+ */
 Pencil.removeItemByIndex = (index,arr) => {
   if(!Array.isArray(arr)){
     return arr
@@ -37,5 +42,15 @@ Pencil.removeItemByIndex = (index,arr) => {
   }
   arr.splice(index,1)
   return arr
+}
+/**
+ * 移除节点
+ * @param {*} node
+ */
+Pencil.removeNode = node => {
+  return node.parentNode.removeChild(node)
+}
+Pencil.on = (node,type,handle) => {
+  node.addEventListener(type,handle,false)
 }
 module.exports = Pencil
