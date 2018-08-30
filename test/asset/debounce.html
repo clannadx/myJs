@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<style>
+  body{
+    height: 3000px;
+  }
+</style>
+<body>
+  <button id="btn">按钮</button>
+  <button id="btn2">按钮2</button>
+<script>
+    const btn = document.getElementById('btn');
+    const btn2 = document.getElementById('btn2');
+    btn.onclick = event1;
+    btn.onclick = event2
+    btn2.addEventListener('click',event1,false);
+    btn2.addEventListener('click',event2,false);   //1,2 都会触发
+    function event1() {
+        console.log('1');
+    }
+    function event2() {
+        console.log('2'); // 只会触发2
+    }
+
+    // scroll
+    window.addEventListener('scroll',() => {
+      console.log('default');
+    })
+    var debounce = createDebounce(() => {
+      console.log('debounce');
+    },1000)
+    window.addEventListener('scroll',debounce);
+    function createDebounce (callback,time) {
+      var timer,
+          time = time || 300;
+      return function () {
+        // 没有 timmer 的时候就生成一个
+        // 到时再触发 callback ，即调用一次
+        // 以此达到减少调用次数的结果
+        if(timer) {
+            clearTimeout(timer)
+        }
+        console.log(1)
+        timer = setTimeout(() => {
+            callback()
+        },time)
+      }
+
+    }
+  </script>
+</body>
+</html>
