@@ -13,7 +13,6 @@ function list (url, id, succ) {
           .replace('{des}',item.des)
       )
     })
-
     list.innerHTML = ret.join('')
     succ && succ()
   })
