@@ -3,7 +3,7 @@
  * @param {Function} callback
  * @param {Number} time
  */
-function createDebounce (callback, time) {
+function createDebounce(callback, time) {
   var timer
   time = time || 300 // 给个默认值
 
@@ -23,15 +23,15 @@ function createDebounce (callback, time) {
 
 
 describe('debounce', () => {
-  test('累加结果',(done) => {
+  test('累加结果', (done) => {
     var total = 0
     const debounce = createDebounce(() => {
-      total+=1
+      total += 1
       expect(total).toBe(1)
       done()
-    },300)
+    }, 300)
 
-    for(let i = 0;i<10;i++){
+    for (let i = 0; i < 10; i++) {
       debounce()
     }
 
